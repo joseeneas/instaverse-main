@@ -1,13 +1,32 @@
+// Desc: Auth component for user to sign in or sign up
+// Import the useState, Avatar, Button, Paper, Grid, Typography, Container, LockOutlined, Input, useNavigate, signin, signup, useDispatch, and useStyles
+// Import the InitialState from the Input component
+// Import the auth actions
 import React, { useState } from 'react';
-import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
-import useStyles from './styles.js';
-import { LockOutlined } from '@material-ui/icons';
-import Input from './Input.js'
-import { useNavigate } from 'react-router-dom'
-import { signin, signup } from '../../actions/auth'
-import { useDispatch } from 'react-redux'
-const InitialState = { firstName: "", lastName: "", email: "", password: "", confirmPassword: "" }
+import {
+    Avatar, 
+    Button,
+    Paper,
+    Grid,
+    Typography,
+    Container
+}                          from '@material-ui/core';
+import useStyles           from './styles.js';
+import { LockOutlined }    from '@material-ui/icons';
+import Input               from './Input.js';
+import { useNavigate }     from 'react-router-dom';
+import { signin, signup }  from '../../actions/auth';
+import { useDispatch }     from 'react-redux'; 
+const InitialState = { firstName: "", lastName: "", email: "", password: "", confirmPassword: "" };
+// Create the Auth component
+// This component is a functional component
+// It takes in no props
+// It uses the useState hook to create the showPassword, formData, and isSignUp states
+// It uses the useStyles hook to get the classes
+// It uses the useNavigate hook to get the history
+// It uses the useDispatch hook to get the dispatch
 const Auth = () => {
+    console.log('CLIENT - AUTH COMPONENT');
     const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData]         = useState(InitialState);
     const [isSignUp, setIsSignUp]         = useState(false);
@@ -106,7 +125,4 @@ const Auth = () => {
         </div>
     )
 }
-
-export default Auth
-
-
+export default Auth;

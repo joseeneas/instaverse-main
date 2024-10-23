@@ -1,5 +1,7 @@
+// Desc: Styles for Post component
+// imports makeStyles from Material UI core styles
+// exports styles for Post component
 import { makeStyles } from '@material-ui/core/styles';
-
 export default makeStyles({
     media: {
         height: 0,
@@ -14,10 +16,10 @@ export default makeStyles({
         height: '100%',
     },
     card: {
+        borderRadius: 10,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        borderRadius: '15px',
         height: '100%',
         position: 'relative',
     },

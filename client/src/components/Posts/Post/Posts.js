@@ -1,30 +1,50 @@
-import React from 'react'
+// import React, useStyles, Card, CardActions, CardContent, CardMedia, Button, Typography, ThumbUpAlt, ThumbUpAltOutlined, 
+// Delete, MoreHoriz, moment, useDispatch, deletePost, likePost
+import React     from 'react'
 import useStyles from './styles.js'
-import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
-import { ThumbUpAlt, ThumbUpAltOutlined, Delete, MoreHoriz } from '@material-ui/icons'
-import moment from 'moment'
-import { useDispatch } from 'react-redux'
-
-import { deletePost, likePost } from '../../../actions/posts.js'
-
+import {
+    Card,
+    CardActions,
+    CardContent,
+    CardMedia,
+    Button,
+    Typography
+}                from '@material-ui/core';
+import {
+    ThumbUpAlt,
+    ThumbUpAltOutlined,
+    Delete,
+    MoreHoriz
+}                from '@material-ui/icons'
+import moment    from 'moment'
+import {
+    useDispatch
+}                from 'react-redux'
+import {
+    deletePost,
+    likePost
+} from '../../../actions/posts.js'
+// Post component
+// @param post, setCurrentId
+// @returns Card component with post details
+// @exports Post
 const Post = ({ post, setCurrentId }) => {
-    const classes = useStyles();
+    console.log('CLIENT - POSTS - POST');
+    const classes  = useStyles();
     const dispatch = useDispatch()
-    const user = JSON.parse(localStorage.getItem('profile'))
-
+    const user     = JSON.parse(localStorage.getItem('profile'))
     const Likes = () => {
         if (post.likes.length > 0) {
             return post.likes.find((like) => like === user?.result?._id)
-                ? (
-                    <><ThumbUpAlt fontSize="small" />&nbsp;{post.likes.length > 2 ? `You and ${post.likes.length - 1} others` : `${post.likes.length} like${post.likes.length > 1 ? 's' : ''}`}</>
-                ) : (
-                    <><ThumbUpAltOutlined fontSize="small" />&nbsp;{post.likes.length} {post.likes.length === 1 ? 'Like' : 'Likes'}</>
-                );
+                ? (<><ThumbUpAlt fontSize="small" />&nbsp;{post.likes.length > 2
+                    ? `You and ${post.likes.length - 1} others`
+                    : `${post.likes.length} like${post.likes.length > 1 ? 's' : ''}`}</>)
+                : (<><ThumbUpAltOutlined fontSize="small" />&nbsp;{post.likes.length} {post.likes.length === 1
+                    ? 'Like'
+                    : 'Likes'}</>);
         }
-
         return <> <ThumbUpAltOutlined fontSize="small" />&nbsp;Like</>
     }
-
     return (
         <Card className={classes.card} >
             <CardMedia className={classes.media} image={post.selectedFile} title={post.title}></CardMedia>
@@ -56,7 +76,6 @@ const Post = ({ post, setCurrentId }) => {
             </CardContent>
             <CardActions className={classes.cardActions}>
                 <Button size="small" color="primary" disabled={!user?.result} onClick={() => dispatch(likePost(post._id))}>
-
                     <Likes />
                 </Button>
                 {(user?.result?._id === post?.creator) && (
@@ -66,9 +85,7 @@ const Post = ({ post, setCurrentId }) => {
                     </Button>
                 )}
             </CardActions>
-
         </Card>
     )
 }
-
-export default Post
+export default Post;
