@@ -1,19 +1,19 @@
-# ![Instaverse Logo](client/src/images/Instaverse.png) instaverse
+# ![Instaverse Logo](client/src/images/Instaverse.png) Instaverse
 
 ## Table of Contents
 
-- [ instaverse](#-instaverse)
+- [Instaverse]
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Usage](#usage)
   - [Technologies](#technologies)
   - [Deployed Application](#deployed-application)
   - [Screenshots of Application](#screenshots-of-application)
-    - [Homepage:](#homepage)
-    - [Signin Page:](#signin-page)
-    - [Signup Page:](#signup-page)
-    - [Profile Page:](#profile-page)
-    - [Edit:](#edit)
+    - [Homepage](#homepage)
+    - [Signin Page](#signin-page)
+    - [Signup Page](#signup-page)
+    - [Profile Page](#profile-page)
+    - [Edit](#edit)
   - [License](#license)
 
 ## Description
@@ -55,23 +55,23 @@ A user will see their post with other users posts. If they enjoy another users p
 
 ## Screenshots of Application
 
-### Homepage:
+### Homepage
 
 ![Home](client/src/images/Home.png)
 
-### Signin Page:
+### Signin Page
 
 ![Signin](client/src/images/signin.png)
 
-### Signup Page:
+### Signup Page
 
 ![Signup](client/src/images/signup.png)
 
-### Profile Page:
+### Profile Page
 
 ![Profile](client/src/images/Profile-page.png)
 
-### Edit:
+### Edit
 
 ![Edit](client/src/images/Edit-Post.png)
 
