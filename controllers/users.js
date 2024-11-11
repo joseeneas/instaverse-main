@@ -6,7 +6,7 @@
 // The signup function is used to sign up the user.
 import bcrypt from 'bcryptjs';
 import jwt    from 'jsonwebtoken';
-import User   from '../models/user.js'
+import User   from '../models/user.js';
 // This is the route that implements the signin functionality.
 // It first checks if the user exists in the database.
 // If the user does not exist, it returns a 404 status code.
@@ -40,12 +40,12 @@ export const signup = async (req, res) => {
     console.log('SIGNUP ROUTE');
     const { email, password, confirmPassword, firstName, lastName } = req.body
     try {
-        const existingUser = await User.findOne({ email });
-        if (existingUser) return res.status(400).json({ message: "User already exists" })
-        if (password !== confirmPassword) res.status(400).json({ message: "Passwords don't match" })
+        const existingUser   = await User.findOne({ email });
+        if (existingUser)      return res.status(400).json({ message: "User already exists" })
+        if (password       !== confirmPassword) res.status(400).json({ message: "Passwords don't match" })
         const hashedPassword = await bcrypt.hash(password, 12)
-        const result = await User.create({ email, password: hashedPassword, name: `${firstName} ${lastName}` })
-        const token = jwt.sign({ email: result.email, id: result._id }, 'test', { expiresIn: "1h" })
+        const result         = await User.create({ email, password: hashedPassword, name: `${firstName} ${lastName}` })
+        const token          = jwt.sign({ email: result.email, id: result._id }, 'test', { expiresIn: "1h" })
         res.status(200).json({ result, token })
     } catch (error) {
         res.status(500).json({ message: "Something went wrong" })
