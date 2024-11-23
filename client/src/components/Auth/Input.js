@@ -28,7 +28,7 @@ import { Visibility, VisibilityOff }                   from '@material-ui/icons'
 // The IconButton component takes in the following props:
 // onClick: the handleShowPassword function
 const Input = ({ name, label, handleChange, half, autoFocus, type, handleShowPassword }) => {
-    console.log('CLIENT - INPUT COMPONENT');
+    console.log('CL:INPUT COMPONENT');
     return (
         <Grid item xs={12} sm={half ? 6 : 12}>
             <TextField
@@ -44,11 +44,11 @@ const Input = ({ name, label, handleChange, half, autoFocus, type, handleShowPas
                     endAdornment: ( 
                         <InputAdornment position="end">
                             <IconButton onClick={handleShowPassword}>
-                                {type === 'password' ? <Visibility /> : <VisibilityOff />}
+                                {type === 'password' ? <Visibility/> : <VisibilityOff/>}
                             </IconButton>
                         </InputAdornment>
                     )
-                } : null} />
+                } : null}/>
         </Grid>
     )
 }

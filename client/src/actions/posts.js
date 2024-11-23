@@ -13,7 +13,7 @@ import * as api                              from '../api';
 // It catches any errors and logs them to the console
 // It gets all the posts from the database
 export const getPosts = () => async (dispatch) => {
-    console.log('CLIENT - GET POSTS ACTION');
+    console.log('CL:GET POSTS ACTION');
     try {
         const { data } = await api.fetchPosts()
         dispatch({ type: FETCH_ALL, payload: data })
@@ -27,7 +27,7 @@ export const getPosts = () => async (dispatch) => {
 // It catches any errors and logs them to the console
 // It creates a new post
 export const createPost = (post) => async (dispatch) => {
-    console.log('CLIENT - CREATE POST ACTION');
+    console.log('CL:CREATE POST ACTION');
     try {
         const { data } = await api.createPost(post)
         dispatch({ type: CREATE, payload: data })
@@ -41,7 +41,7 @@ export const createPost = (post) => async (dispatch) => {
 // It catches any errors and logs them to the console
 // It updates a post
 export const updatePost = (id, post) => async (dispatch) => {
-    console.log('CLIENT - UPDATE POST ACTION');
+    console.log('CL:UPDATE POST ACTION');
     try {
         const { data } = await api.updatePost(id, post)
         dispatch({ type: UPDATE, payload: data })
@@ -55,7 +55,7 @@ export const updatePost = (id, post) => async (dispatch) => {
 // It catches any errors and logs them to the console
 // It deletes a post
 export const deletePost = (id) => async (dispatch) => {
-    console.log('CLIENT - DELETE POST ACTION');
+    console.log('CL:DELETE POST ACTION');
     try {
         await api.deletePost(id)
         dispatch({ type: DELETE, payload: id })
@@ -69,7 +69,7 @@ export const deletePost = (id) => async (dispatch) => {
 // It catches any errors and logs them to the console
 // It likes a post
 export const likePost = (id) => async (dispatch) => {
-    console.log('CLIENT - LIKE POST ACTION');
+    console.log('CL:LIKE POST ACTION');
     try {
         const { data } = await api.likePost(id)
         dispatch({ type: UPDATE, payload: data })

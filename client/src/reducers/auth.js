@@ -14,14 +14,13 @@ import { AUTH, LOGOUT } from "../constants/actionTypes";
 // return the state
 // export the authReducer function
 const authReducer = (state = { authData: null }, action) => {
-    console.log('CLIENT - AUTH REDUCER:', action.type);
     switch (action.type) {
         case AUTH:
-            console.log('CLIENT - AUTH REDUCER:', action.type);
+            console.log('CL:AUTH RED:auth:ACTION TYPE:', action.type);
             localStorage.setItem('profile', JSON.stringify({ ...action?.data }));
             return { ...state, authData: action?.data };
         case LOGOUT:
-            console.log('CLIENT - AUTH REDUCER:', action.type);
+            console.log('CL:AUTH RED:logout:ACTION TYPE:', action.type);
             localStorage.clear();
             return { ...state, authData: null };
         default:

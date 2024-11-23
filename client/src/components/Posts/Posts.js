@@ -16,7 +16,7 @@ import { Grid, CircularProgress } from '@material-ui/core'
 // each Grid item will have a key prop with the post._id, sx prop with 12 and sm, and a Post component with post and setCurrentId props
 // export the Posts component
 const Posts = ({ setCurrentId }) => {
-    console.log('CLIENT - POSTS');
+    console.log('CL:POSTS');
     const classes = useStyles();
     const posts = useSelector((state) => state.posts)
     return (

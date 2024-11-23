@@ -45,13 +45,13 @@ import useStyles       from './styles.js'
 // xs: 12
 // sm: 4
 const Home = () => {
-    console.log('CLIENT - HOME COMPONENT');
-    const [currentId, setCurrentId] = useState(null)
+    console.log('CL:HOME COMPONENT');
+    const [currentId, setCurrentId] = useState(null);
     const classes = useStyles();
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getPosts())
-    }, [currentId, dispatch])
+        dispatch(getPosts());
+    }, [currentId, dispatch]);
     return (
         <Grow in>
             <Container>

@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
     // root: an object that contains the following properties:
     //  '& .MuiTextField-root': an object that contains the following properties:
-    //   margin: the margin
+    //   margin: the margin you want to apply to the text field 
     root: {
         '& .MuiTextField-root': {
             margin: theme.spacing(1)
@@ -21,16 +21,16 @@ export default makeStyles((theme) => ({
     //  flexWrap: wrap
     //  justifyContent: center
     form: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center'
+        display        : 'flex',
+        flexWrap       : 'wrap',
+        justifyContent : 'center'
     },
     // fileInput: an object that contains the following properties:
     //  width: 97%
     //  margin: 10px 0
     fileInput: {
-        width: '97%',
-        margin: '10px 0'
+        width  : '97%',
+        margin : '10px 0'
     },
     // buttonSubmit: an object that contains the following properties:
     buttonSubmit: {

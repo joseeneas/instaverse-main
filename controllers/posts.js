@@ -7,7 +7,7 @@ import mongoose    from 'mongoose';
 // If there is an error, it returns a 404 status code.
 // If there is no error, it returns a 200 status code.
 export const getPosts = async (req, res) => {
-    console.log('GET POSTS ROUTE');
+    console.log('SR:GET POSTS ROUTE');
     try {
         const postMessages = await PostMessage.find()
         res.status(200).json(postMessages)
@@ -23,7 +23,7 @@ export const getPosts = async (req, res) => {
 // If there is an error, it returns a 409 status code.
 // If there is no error, it returns a 201 status code.
 export const createPost = async (req, res) => {
-    console.log('CREATE POST ROUTE');
+    console.log('SR:CREATE POST ROUTE');
     const post = req.body;
     const newPost = new PostMessage({ ...post, creator: req.userId, createdAt: new Date().toISOString() })
     try {
@@ -41,7 +41,7 @@ export const createPost = async (req, res) => {
 // It updates the post with the new post.
 // If there is an error, it returns a 404 status code.
 export const updatePost = async (req, res) => {
-    console.log('UPDATE POST ROUTE');
+    console.log('SR:UPDATE POST ROUTE');
     const { id: _id } = req.params
     const post = req.body
     if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('No post with that id');
@@ -55,7 +55,7 @@ export const updatePost = async (req, res) => {
 // If the id is not valid, it returns a 404 status code.
 // It deletes the post.
 export const deletePost = async (req, res) => {
-    console.log('DELETE POST ROUTE');
+    console.log('SR:DELETE POST ROUTE');
     const { id: _id } = req.params;
     if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('No post with that id');
     try {
@@ -78,7 +78,7 @@ export const deletePost = async (req, res) => {
 // If the user has not liked the post, it likes the post.
 // If the user has liked the post, it unlikes the post.
 export const likePost = async (req, res) => {
-    console.log('LIKE POST ROUTE');
+    console.log('SR:LIKE POST ROUTE');
     const { id } = req.params
     if (!req.userId) return res.json({ message: 'Unauthenticated' })
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No post with that id');

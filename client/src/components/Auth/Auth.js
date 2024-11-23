@@ -26,7 +26,7 @@ const InitialState = { firstName: "", lastName: "", email: "", password: "", con
 // It uses the useNavigate hook to get the history
 // It uses the useDispatch hook to get the dispatch
 const Auth = () => {
-    console.log('CLIENT - AUTH COMPONENT');
+    console.log('CL:AUTH COMPONENT');
     const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData]         = useState(InitialState);
     const [isSignUp, setIsSignUp]         = useState(false);

@@ -15,7 +15,7 @@ import User   from '../models/user.js';
 // If the password is correct, it generates a token and returns a 200 status code.
 // If there is another type of error, it returns a 500 status code.
 export const signin = async (req, res) => {
-    console.log('SIGIN ROUTE');
+    console.log('SR:SIGIN ROUTE');
     const { email, password } = req.body
     try {
         const existingUser      = await User.findOne({ email })
@@ -37,7 +37,7 @@ export const signin = async (req, res) => {
 // It generates a token and returns a 200 status code.
 // If there is another type of error, it returns a 500 status code.
 export const signup = async (req, res) => {
-    console.log('SIGNUP ROUTE');
+    console.log('SR:SIGNUP ROUTE');
     const { email, password, confirmPassword, firstName, lastName } = req.body
     try {
         const existingUser   = await User.findOne({ email });

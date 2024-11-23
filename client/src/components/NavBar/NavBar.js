@@ -1,5 +1,6 @@
 // Desc: NavBar component for the application
-// Import React, useState, useEffect, AppBar, Avatar, Button, Toolbar, Typography, useStyles, Instaverse, Link, useNavigate, useLocation, useDispatch, and jwtDecode
+// Import React, useState, useEffect, AppBar, Avatar, Button, Toolbar, Typography, 
+//        useStyles, Instaverse, Link, useNavigate, useLocation, useDispatch, and jwtDecode
 import React, { useState, useEffect }     from 'react'
 import {
     AppBar,
@@ -50,30 +51,30 @@ import { jwtDecode }                      from 'jwt-decode'
 // The Button component takes in the component, to, variant, and color props
 // The Button component contains the text Sign In
 export const NavBar = () => {
-    console.log('CLIENT - NAVBAR');
-    const classes = useStyles()
-    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')))
-    const dispatch = useDispatch()
-    const history = useNavigate()
-    const location = useLocation()
+    console.log('CL:NAVBAR COMPONENT');
+    const classes         = useStyles();
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+    const dispatch        = useDispatch();
+    const history         = useNavigate();
+    const location        = useLocation();
     const logout = () => {
-        dispatch({ type: 'LOGOUT' })
-        history('/auth')
-        setUser(null)
+        dispatch({ type: 'LOGOUT' });
+        history('/auth');
+        setUser(null);
     }
     useEffect(() => {
-        const token = user?.token
+        const token = user?.token;
         if (token) {
-            const decodedToken = jwtDecode(token)
-            if (decodedToken.exp * 1000 < new Date().getTime()) logout()
+            const decodedToken = jwtDecode(token);
+            if (decodedToken.exp * 1000 < new Date().getTime()) logout();
         }
-        setUser(JSON.parse(localStorage.getItem('profile')))
+        setUser(JSON.parse(localStorage.getItem('profile')));
         // eslint-disable-next-line
     }, [location, user?.token])
     return (
         <AppBar className={classes.appBar} position="static" color="inherit"  >
             <div className={classes.brandContainer}>
-                <Typography className={classes.heading} component={Link} to="/" variant="h2" align="center" >instaverse</Typography>
+                <Typography className={classes.heading} component={Link} to="/" variant="h2" align="center">instaverse</Typography>
                 <img className={classes.image} src={Instaverse} alt="instaverse" heigh="60" />
             </div>
             <Toolbar className={classes.toolbar}>

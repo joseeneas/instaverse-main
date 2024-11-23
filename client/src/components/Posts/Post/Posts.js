@@ -15,21 +15,21 @@ import {
     ThumbUpAltOutlined,
     Delete,
     MoreHoriz
-}                from '@material-ui/icons'
-import moment    from 'moment'
+}                from '@material-ui/icons';
+import moment    from 'moment';
 import {
     useDispatch
-}                from 'react-redux'
+}                from 'react-redux';
 import {
     deletePost,
     likePost
-} from '../../../actions/posts.js'
+}                from '../../../actions/posts.js';
 // Post component
 // @param post, setCurrentId
 // @returns Card component with post details
 // @exports Post
 const Post = ({ post, setCurrentId }) => {
-    console.log('CLIENT - POSTS - POST');
+    console.log('CL:POSTS:POST');
     const classes  = useStyles();
     const dispatch = useDispatch()
     const user     = JSON.parse(localStorage.getItem('profile'))

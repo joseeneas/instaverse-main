@@ -51,7 +51,7 @@ import {
 // The first Button component takes in the className, variant, color, size, type, and fullWidth props
 // The second Button component takes in the variant, color, size, onClick, and fullWidth props
 const Form = ({ currentId, setCurrentId }) => {
-    console.log('CLIENT - FORM COMPONENT');
+    console.log('CL:FORM COMPONENT');
     const [postData, setPostData] = useState({ title: '', message: '', tags: '', selectedFile: '' });
     const post                    = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null)
     const classes                 = useStyles();

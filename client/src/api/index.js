@@ -1,5 +1,5 @@
 // Desc: API calls to the server
-// Import axios
+// Import axios, the library used to make HTTP requests
 import axios from 'axios';
 // Create an instance of axios with the base URL of the server
 // This instance will be used to make all the API calls
@@ -7,9 +7,9 @@ import axios from 'axios';
 // This header contains the token from the localStorage
 const API = axios.create({ baseURL: 'http://localhost:8080' });
 API.interceptors.request.use((req) => {
-    console.log('CLIENT - API - REQUEST INTERCEPTOR');
+    console.log('CL:API:REQ INTERCEPTOR');
     if (localStorage.getItem('profile')) {
-        console.log('CLIENT - API - REQUEST INTERCEPTOR - AUTHORIZATION HEADER');
+        console.log('CL:API:REQ INTERCEPTOR:AUTH HEADER');
         req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`
     }
     return req;
