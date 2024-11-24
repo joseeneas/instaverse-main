@@ -20,6 +20,10 @@
 // The constants are used in the styles.
 // The constants are used in the components.
 // Constants for action types - Posts
+/**
+ * Action type for creating a new item.
+ * @constant {string}
+ */
 export const CREATE    = 'CREATE';
 export const UPDATE    = 'UPDATE';
 export const DELETE    = 'DELETE';

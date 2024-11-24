@@ -43,6 +43,13 @@ export const signin = (formData, history) => async (dispatch) => {
 // This action takes in the formData and the history
 // It is an async function that dispatches the AUTH action with the data from the api
 // It catches any errors and logs them to the console
+/**
+ * Action creator for signing up a user.
+ *
+ * @param {Object} formData - The form data containing user information for sign up.
+ * @param {Object} history - The history object for navigation.
+ * @returns {Function} A function that takes dispatch as an argument and performs the sign up process.
+ */
 export const signup = (formData, history) => async (dispatch) => {
     console.log('CL:AUTH:SIGNUP ACTION');
     try {

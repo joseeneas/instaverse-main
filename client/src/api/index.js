@@ -5,6 +5,11 @@ import axios from 'axios';
 // This instance will be used to make all the API calls
 // It also intercepts the request to add the Authorization header
 // This header contains the token from the localStorage
+/**
+ * Creates an instance of axios with a predefined base URL.
+ * 
+ * @constant {AxiosInstance} API - An axios instance configured with the base URL 'http://localhost:8080'.
+ */
 const API = axios.create({ baseURL: 'http://localhost:8080' });
 API.interceptors.request.use((req) => {
     console.log('CL:API:REQ INTERCEPTOR');
