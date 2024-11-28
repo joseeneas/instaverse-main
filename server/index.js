@@ -50,7 +50,7 @@ app.use(cors());
 // The `app.use()` method is used to add routes to the application.
 // In this case, we are adding the postRoutes and userRoutes to handle requests related to posts and users, respectively.
 app.use('/posts', postRoutes);
-app.use('/user', userRoutes);
+app.use('/user',  userRoutes);
 console.log('App starting up ...');
 // The `app.get()` method is used to define a route that responds to HTTP GET requests.
 // In this case, we are defining a route that serves the React application in production.

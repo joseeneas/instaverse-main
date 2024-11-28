@@ -12,9 +12,19 @@
         "Crect",
         "Cstop",
         "Csvg",
+        "dotenv",
+        "jscoverage",
+        "jspm",
         "MERN",
+        "Microbundle",
+        "nuxt",
+        "Nuxt",
+        "pids",
         "SIGIN",
         "signup",
-        "Signup"
+        "Signup",
+        "stylelintcache",
+        "vuepress",
+        "wscript"
     ]
 }
