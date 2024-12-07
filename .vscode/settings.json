@@ -88,8 +88,8 @@
             "driver": "Oracle",
             "name": "oracle-docker",
             "database": "FREEPDB1",
-            "username": "system",
-            "password": "pass123"
+            "username": "eneas",
+            "password": "123"
         }
     ]
 }
