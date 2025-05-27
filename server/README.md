@@ -1,4 +1,4 @@
-# ![Instaverse Logo](client/src/images/Instaverse.png) Instaverse
+# ![Instaverse Logo](../client/src/images/Instaverse.png) Instaverse
 
 ## Table of Contents
 
@@ -57,23 +57,23 @@ A user will see their post with other users posts. If they enjoy another users p
 
 ### Homepage
 
-![Home](client/src/images/Home.png)
+![Home](../client/src/images/Home.png)
 
 ### Signin Page
 
-![Signin](client/src/images/signin.png)
+![Signin](../client/src/images/signin.png)
 
 ### Signup Page
 
-![Signup](client/src/images/signup.png)
+![Signup](../client/src/images/signup.png)
 
 ### Profile Page
 
-![Profile](client/src/images/Profile-page.png)
+![Profile](../client/src/images/Profile-page.png)
 
 ### Edit
 
-![Edit](client/src/images/Edit-Post.png)
+![Edit](../client/src/images/Edit-Post.png)
 
 ## License
 

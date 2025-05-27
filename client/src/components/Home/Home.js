@@ -5,21 +5,21 @@
 // import Posts from '../Posts/Posts.js'
 // import Form from '../Form/Form.js'
 // import useStyles from './styles.js'
-import 
-    React, {
+import
+React, {
     useEffect,
     useState
-}                      from 'react';
+} from 'react';
 import {
     Grow,
     Container,
     Grid
-}                      from '@material-ui/core';
+} from '@material-ui/core';
 import { useDispatch } from 'react-redux'
-import {getPosts}      from '../../actions/posts.js'
-import Posts           from '../Posts/Posts.js'
-import Form            from '../Form/Form.js'
-import useStyles       from './styles.js'
+import { getPosts } from '../../actions/posts.js'
+import Posts from '../Posts/Posts.js'
+import Form from '../Form/Form.js'
+import useStyles from './styles.js'
 // Create the Home component
 // This component is a functional component
 // It uses the useState hook to create the currentId state
@@ -60,7 +60,7 @@ const Home = () => {
                         <Posts setCurrentId={setCurrentId} />
                     </Grid>
                     <Grid item xs={12} sm={4}>
-                        <Form currentId={currentId} setCurrentId={setCurrentId}/>
+                        <Form currentId={currentId} setCurrentId={setCurrentId} />
                     </Grid>
                 </Grid>
             </Container>
