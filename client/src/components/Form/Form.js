@@ -57,9 +57,11 @@ const Form = ({ currentId, setCurrentId }) => {
     const classes                 = useStyles();
     const dispatch                = useDispatch()
     const user                    = JSON.parse(localStorage.getItem('profile'))
+    
     useEffect(() => {
         if (post) setPostData(post)
     }, [post])
+    
     const handleSubmit = (e) => {
         e.preventDefault()
         if (currentId) {
