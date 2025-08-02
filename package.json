@@ -9,12 +9,11 @@
     "npm": "10.x"
   },
    "scripts": {
-
+    "build": "npm ci && npm run build",
     "start": "cd ../server && npm ci --omit=dev && node index.js",
     "dev": "concurrently \"npm run server\" \"npm run ../client\"",
     "server": "cd ../server && npm run start",
-    "client": "cd ../client && npm start",
-    "heroku-postbuild": "npm run build"
+    "client": "cd ../client && npm start"
   },
   "dependencies": {
     "concurrently": "^8.2.2"
