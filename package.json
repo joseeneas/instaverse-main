@@ -1,0 +1,25 @@
+{
+  "name": "instaverse",
+  "version": "1.0.0",
+  "description": "Full stack MERN social media application",
+  "main": "server/index.js",
+  "type": "module",
+  "engines": {
+    "node": "24.5.0",
+    "npm": "10.x"
+  },
+  "scripts": {
+    "build": "cd client && npm ci && npm run build",
+    "start": "cd server && npm ci --omit=dev && node index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run start",
+    "client": "cd client && npm start",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["mern", "social-media", "react", "nodejs", "mongodb"],
+  "author": "",
+  "license": "ISC"
+}
